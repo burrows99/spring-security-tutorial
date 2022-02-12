@@ -22,7 +22,7 @@ public class Configuration extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .authenticated()
                 .and()
-                .httpBasic();
+                .formLogin();
 //        this will authorize any request that is authenticated and the authentication methiod used will be httpbasic
 //        urls inside antmatchers will not be protected by spring security
 //        learn about antmatchers
