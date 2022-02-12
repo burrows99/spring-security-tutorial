@@ -27,9 +27,9 @@ public class UserService {
         return this.userRepository.findAll();
     }
 
-    public User getUser(String username){
+    public User getUser(Long id){
 //        return this.list.stream().filter((user) -> user.getUsername().equals(username)).findAny().orElse(null);
-        return (User) this.userRepository.getById(username);
+        return (User) this.userRepository.getById(id);
     }
 
     public User addUser(User user){

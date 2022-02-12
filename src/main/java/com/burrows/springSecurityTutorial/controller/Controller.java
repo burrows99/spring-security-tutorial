@@ -22,9 +22,9 @@ public class Controller {
         return this.userService.getAllUsers();
     }
 
-    @GetMapping("/{username}")
-    public User getUser(@PathVariable("username") String username){
-        return this.userService.getUser(username);
+    @GetMapping("/{id}")
+    public User getUser(@PathVariable("id") Long id){
+        return this.userService.getUser(id);
     }
 
     @PostMapping("/")

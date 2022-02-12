@@ -1,8 +1,6 @@
 package com.burrows.springSecurityTutorial.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
@@ -15,6 +13,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long id;
+
+    @NotNull
+    @Column
     String username;
 
     @NotNull
@@ -26,5 +29,6 @@ public class User {
     String email;
 
     @Column
+    @NotNull
     String role;
 }
